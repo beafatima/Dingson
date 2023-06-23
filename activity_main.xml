@@ -1,129 +1,232 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background_color"
+    android:clickable="true">
 
-    tools:context=".MainActivity">
+    <TextView
+        android:id="@+id/Settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="157dp"
+        android:layout_marginTop="70dp"
+        android:text="Settings"
+        android:textColor="@color/text_color"
+        android:textSize="25sp"
+        tools:ignore="RelativeOverlap" />
 
-    <Button
-        android:id="@+id/btn"
+    <TextView
+        android:id="@+id/notif"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button 1"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="341dp"
-        android:layout_centerHorizontal="true"/>
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="115dp"
+        android:text="Notification"
+        android:textColor="@color/text_color"
+        android:textSize="20sp"
+        tools:ignore="HardcodedText" />
 
-    <Button
-        android:id="@+id/btn2"
+    <TextView
+        android:id="@+id/CountdownNotif"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button 2"
-        android:layout_alignParentEnd="true"/>
-    <Button
-        android:id="@+id/btn3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button 3"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="341dp"
-        android:layout_below="@id/btn"/>
-    <Button
-        android:id="@+id/btn4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button 4"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="341dp"
-        android:layout_below="@id/btn"
-        android:layout_centerHorizontal="true"/>
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="170dp"
+        android:text="Countdown Notification"
+        android:textColor="@color/text_color"
+        android:textSize="20sp"
+        tools:ignore="HardcodedText" />
 
-    <Button
-        android:id="@+id/btn5"
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/countdownNotification"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btn2"
-        android:text="Button 5"
-        android:layout_alignParentEnd="true"/>
-    <Button
-        android:id="@+id/btn6"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="172dp"
+        android:layout_marginEnd="47dp" />
+
+    <TextView
+        android:id="@+id/sound_effect"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button 6"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="341dp"
-        android:layout_below="@id/btn3"/>
-    <Button
-        android:id="@+id/btn7"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="225dp"
+        android:autofillHints="false"
+        android:text="Sound Effect"
+        android:textColor="@color/text_color"
+        android:textSize="20sp"
+        tools:ignore="HardcodedText" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/soundEffect"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button 7"
-        android:layout_below="@id/btn6"
-        android:layout_alignParentEnd="true"/>
-    <Button
-        android:id="@+id/btn8"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="225dp"
+        android:layout_marginEnd="45dp"/>
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/planting"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button 8"
-        android:layout_below="@id/btn7"
-        android:layout_alignParentStart="true"/>
-    <Button
-        android:id="@+id/btn9"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="276dp"
+        android:layout_marginEnd="45dp"/>
+
+    <TextView
+        android:id="@+id/planting_reminder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button 9"
-        android:layout_below="@id/btn7"
-        android:layout_alignParentEnd="true"/>
-    <Button
-        android:id="@+id/btn10"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="275dp"
+        android:autofillHints="false"
+        android:text="Planting Reminder"
+        android:textColor="@color/text_color"
+        android:textSize="20sp"
+        tools:ignore="HardcodedText"
+        />
+
+    <TextView
+        android:id="@+id/language"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button 10"
-        android:layout_below="@id/btn8"
-        android:layout_alignParentStart="true"/>
-    <Button
-        android:id="@+id/btn11"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="381dp"
+        android:text="Language"
+        android:textColor="@color/text_color"
+        android:textSize="20sp"
+        tools:ignore="Autofill,HardcodedText,LabelFor,TextFields" />
+
+    <TextView
+        android:id="@+id/change_lang"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button 11"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="341dp"
-        android:layout_below="@id/btn9"
-        android:layout_centerHorizontal="true"/>
-    <Button
-        android:id="@+id/btn12"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginBottom="335dp"
+        android:importantForAutofill="no"
+        android:text="Change Language"
+        android:textColor="@color/text_color"
+        android:textSize="20sp"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/lang_option"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button 12"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="341dp"
-        android:layout_below="@id/btn11"
-        android:layout_centerHorizontal="true"/>
-    <Button
-        android:id="@+id/btn13"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="333dp"
+        android:text="English"
+        android:textColor="@color/text_color"
+        android:textSize="20sp"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/music"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button 13"
-        android:layout_below="@id/btn12"
-        android:layout_alignParentStart="true"/>
-    <Button
-        android:id="@+id/btn14"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="288dp"
+        android:text="Music"
+        android:textColor="@color/text_color"
+        android:textSize="20sp"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/ambience1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button 14"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="341dp"
-        android:layout_below="@id/btn13"
-        android:layout_centerHorizontal="true"/>
-    <Button
-        android:id="@+id/btn15"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginBottom="242dp"
+        android:text="Ambience"
+        android:textColor="@color/text_color"
+        android:textSize="20sp"
+        tools:ignore="HardcodedText" />
+
+
+    <TextView
+        android:id="@+id/ambience2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button 15"
-        android:layout_below="@id/btn14"
-        android:layout_alignParentEnd="true"/>
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="46dp"
+        android:layout_marginBottom="245dp"
+        android:drawableStart="@drawable/baseline_volume_off_24"
+        tools:ignore="RelativeOverlap,UseCompatTextViewDrawableXml" />
+
+    <TextView
+        android:id="@+id/theme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="193dp"
+        android:text="Theme"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/dark_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginBottom="143dp"
+        android:text="Dark mode"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        tools:ignore="HardcodedText" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/switcher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="140dp" />
+    <TextView
+        android:id="@+id/fonts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="101dp"
+        android:text="Font"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        tools:ignore="HardcodedText" />
 
 </RelativeLayout>
-

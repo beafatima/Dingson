@@ -1,46 +1,55 @@
-package com.example.lifecycle;
+package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.widget.Toast;
+import android.os.Parcelable;
+import android.view.View;
+
+import com.google.android.material.switchmaterial.SwitchMaterial;
+
 
 public class MainActivity extends AppCompatActivity {
-
+    SwitchMaterial switcher;
+    boolean nightMode;
+    SharedPreferences sharedPreferences;
+    SharedPreferences.Editor editor;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toast.makeText(getApplicationContext(), "Created!", Toast.LENGTH_SHORT).show();
+
+        getSupportActionBar().hide();
+
+        switcher = findViewById(R.id.switcher);
+
+        sharedPreferences = getSharedPreferences("MODE", Context.MODE_PRIVATE);
+        nightMode = sharedPreferences.getBoolean("night", false);
+
+        if(nightMode){
+            switcher.setChecked(true);
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        }
+
+        switcher.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                if(nightMode){
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                    editor = sharedPreferences.edit();
+                    editor.putBoolean("night", false);
+
+                }else{
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                    editor = sharedPreferences.edit();
+                    editor.putBoolean("night", true);
+                }
+                editor.apply();
+            }
+        });
     }
-    @Override
-    protected void onStart() {
-        super.onStart();
-        Toast.makeText(getApplicationContext(), "Started!", Toast.LENGTH_SHORT).show();
-    }
-    @Override
-    protected void onResume() {
-        super.onResume();
-        Toast.makeText(getApplicationContext(), "Resumed!", Toast.LENGTH_SHORT).show();
-    }
-    @Override
-    protected void onPause(){
-        super.onPause();
-        Toast.makeText(getApplicationContext(), "Paused!", Toast.LENGTH_SHORT).show();
-    }
-    @Override
-    protected void onStop(){
-        super.onStop();
-        Toast.makeText(getApplicationContext(), "Stopped!", Toast.LENGTH_SHORT).show();
-    }
-    @Override
-    protected void onRestart(){
-        super.onRestart();
-        Toast.makeText(getApplicationContext(), "Restarted!", Toast.LENGTH_SHORT).show();
-    }
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        Toast.makeText(getApplicationContext(), "Destroyed!", Toast.LENGTH_SHORT).show();
-    }
+
 }
